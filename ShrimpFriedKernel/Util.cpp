@@ -44,3 +44,10 @@ PVOID Util::GetExportedFunctionAddress(PEPROCESS TargetProcess, PVOID ModuleBase
 
 	return FunctionAddress;
 }
+
+NTSTATUS Util::Sleep(ULONGLONG microseconds)
+{
+	LARGE_INTEGER delay;
+	delay.QuadPart = -1 * microseconds * 10;
+	return KeDelayExecutionThread(KernelMode, 0, &delay);
+}

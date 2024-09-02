@@ -20,4 +20,6 @@ namespace Util {
 	}
 
 	PVOID GetExportedFunctionAddress(PEPROCESS TargetProcess, PVOID ModuleBase, CONST CHAR* ExportedFunctionName);
+
+	NTSTATUS Sleep(ULONGLONG microseconds);
 }

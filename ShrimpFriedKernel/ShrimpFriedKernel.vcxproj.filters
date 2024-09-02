@@ -37,7 +37,13 @@
     <ClCompile Include="Util.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Vendor\NoPGCallback\Npg.cpp">
+    <ClCompile Include="Vendor\NoPgCallback\Npg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\PteUtils\PteUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DbgBlock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -123,10 +129,16 @@
     <ClInclude Include="Vendor\kstl\kvector.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Vendor\NoPGCallback\Npg.h">
+    <ClInclude Include="Vendor\NoPgCallback\Npg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Vendor\NoPGCallback\Include.h">
+    <ClInclude Include="Vendor\NoPgCallback\Include.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\PteUtils\PteUtils.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DbgBlock.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

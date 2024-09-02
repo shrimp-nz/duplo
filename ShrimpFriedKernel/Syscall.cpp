@@ -49,7 +49,7 @@ PVOID Syscall::GetNtSyscallFunc(_PSSDT ssdt, SHORT index)
     return (PVOID)((ULONG64)ssdt->ServiceTable + (ssdt->ServiceTable[index] >> 4));
 }
 
-extern "C" PSHORT NtBuildNumber;
+extern "C" NTKERNELAPI SHORT NtBuildNumber;
 
 // https://github.com/JakubGlisz/GetSSDT
 // https://www.unknowncheats.me/forum/3383983-post3.html
@@ -73,7 +73,7 @@ _PSSDT Syscall::GetSSDT()
         }
     }
 
-    if (*NtBuildNumber > 0x42EE)
+    if (NtBuildNumber > 17134)
     {
         for (int i = 0; i < Limit; i++) {
             if (*(PUINT8)(KiSystemCall64 + i) == 0xE9

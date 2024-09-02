@@ -90,15 +90,18 @@
     <FilesToPackage Include="$(TargetPath)" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DbgBlock.cpp" />
     <ClCompile Include="Entry.cpp" />
     <ClCompile Include="Syscall.cpp" />
     <ClCompile Include="Util.cpp" />
     <ClCompile Include="Vendor\InfinityHook_latest\etwhook_init.cpp" />
     <ClCompile Include="Vendor\InfinityHook_latest\etwhook_manager.cpp" />
     <ClCompile Include="Vendor\InfinityHook_latest\etwhook_utils.cpp" />
-    <ClCompile Include="Vendor\NoPGCallback\Npg.cpp" />
+    <ClCompile Include="Vendor\NoPgCallback\Npg.cpp" />
+    <ClCompile Include="Vendor\PteUtils\PteUtils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DbgBlock.hpp" />
     <ClInclude Include="Syscall.hpp" />
     <ClInclude Include="Util.hpp" />
     <ClInclude Include="Vendor\InfinityHook_latest\etwhook_base.hpp" />
@@ -126,8 +129,9 @@
     <ClInclude Include="Vendor\kstl\kstring.hpp" />
     <ClInclude Include="Vendor\kstl\ksystem_info.hpp" />
     <ClInclude Include="Vendor\kstl\kvector.hpp" />
-    <ClInclude Include="Vendor\NoPGCallback\Include.h" />
-    <ClInclude Include="Vendor\NoPGCallback\Npg.h" />
+    <ClInclude Include="Vendor\NoPgCallback\Include.h" />
+    <ClInclude Include="Vendor\NoPgCallback\Npg.h" />
+    <ClInclude Include="Vendor\PteUtils\PteUtils.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
